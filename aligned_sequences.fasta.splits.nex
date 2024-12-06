@@ -1,0 +1,27 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=5;
+TAXLABELS
+[1] 'NC_051176.1_96236740-96275291'
+[2] 'NW_024609880.1_92058811-92061911'
+[3] 'NC_051154.1_310944550-310959889'
+[4] 'NW_026085831.1_92730987-92743499'
+[5] 'NW_027051223.1_3311765-3316716'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=5 nsplits=7;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 4,
+	100	 3 4,
+	100	 5,
+	100	 1 2,
+	100	 1,
+;
+END; [Splits]
+
