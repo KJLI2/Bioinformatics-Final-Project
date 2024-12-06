@@ -2,7 +2,7 @@ Evolutionary Study on Defensin Protein Conservation Across Tick Species
 
 Pipeline:
 1. Downloaded Entrez Direct to obtain sequences from NCBI using sh -c "$(curl -fsSL https://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh)"
-2. Used Entrez Direct to obtain defensin sequences using
+2. Used Entrez Direct to obtain defensin sequences and placed into a new file called defensin_sequences.fasta using
 
    </ENTREZ_DIRECT>
 	
@@ -15,3 +15,6 @@ Pipeline:
    efetch -db nuccore -id NW_026085831.1 -format fasta -seq_start 92730987 -seq_stop 92743499 >> defensin_sequences.fasta
    
    efetch -db nuccore -id NW_027051223.1 -format fasta -seq_start 3311765 -seq_stop 3316716 >> defensin_sequences.fasta
+   
+4. Used MAFFT to align sequences and saved in aligned_sequences.fasta
+   mafft --auto defensin_sequences.fasta > aligned_sequences.fasta
