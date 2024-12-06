@@ -34,5 +34,6 @@ cat aligned_sequences.fasta.contree
 library(ape)
 library(ggtree)
 11. Visualzed tree on R
+
 shh_tree <- "(Rhipicephalus_sanguineus:0.1805648827,Ixodes_scapularis:0.2957665347,((Dermacentor_silvarum:0.2230923568,Dermacentor_andersoni:0.2029175234)100:0.4927511056,Dermacentor_albipictus:0.3844533755)100:0.1097124366);"
 shh_tree <- read.tree(text = shh_tree)
